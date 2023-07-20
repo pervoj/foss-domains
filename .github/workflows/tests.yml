@@ -31,4 +31,5 @@ jobs:
 
       - uses: gacts/install-dnscontrol@v1
 
-      - run: dnscontrol check --config dns/dnsconfig.js
+      - working-directory: dns
+        run: dnscontrol check
