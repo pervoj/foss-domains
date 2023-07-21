@@ -1,6 +1,6 @@
 [
   {
-    "type": "txt",
-    "value": "https://ossnet.xyz/"
+    "type": "cname",
+    "value": "_.fosslab.cc."
   }
 ]
