@@ -10,6 +10,7 @@ var DNS_CF = NewDnsProvider("cloudflare");
 var DEFAULT_TTL = 1800;
 
 var DOMAINS_DIR = "../domains/";
+var RECORDS_FILE = "records.json";
 
 /**
  * Throws an error if [records] is not valid.
@@ -71,9 +72,12 @@ function loadConfig() {
   for (var i = 0; i < files.length; i++) {
     var file = /** @type {`${string}.json`} */ (files[i]);
 
+    var basename = file.split("/").reverse()[0];
+    if (basename != RECORDS_FILE) continue;
+
     var parts = file // For example: [ossnet.xyz, my-project, git]
       .replace(DOMAINS_DIR, "")
-      .replace("/dns.json", "")
+      .replace("/" + RECORDS_FILE, "")
       .split("/");
 
     var domain = parts.shift();
