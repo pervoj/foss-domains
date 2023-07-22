@@ -12,20 +12,25 @@
 }
 
 body {
+  margin: 0;
+}
+
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 2.5rem;
-  margin: 0;
-  padding: 1rem;
-  min-height: 100vh;
   text-align: center;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
-body::before,
-body::after {
+.hero-section::before,
+.hero-section::after {
   content: "";
   position: absolute;
   display: block;
@@ -39,34 +44,44 @@ body::after {
   background-image: linear-gradient(45deg, #1c71d8, #2ec27e);
 }
 
-body::before {
+.hero-section::before {
   inset-block-start: 0;
   inset-inline-start: 0;
   transform: translate(-20%, -60%) scale(1.2);
 }
 
-body::after {
+.hero-section::after {
   inset-block-end: 0;
   inset-inline-end: 0;
   transform: translate(60%, -20%);
 }
 
-header {
+.hero-content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
 }
 
-svg {
-  width: 2.5rem;
+.page-title {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2ch;
+  align-items: center;
+
+  font-size: 2.5rem;
+}
+
+.page-title svg {
+  height: 1em;
   fill: currentColor;
 }
 
-h1 {
+.page-title h1 {
+  font-size: 1em;
   text-transform: uppercase;
   font-weight: 900;
-  font-size: 2.5rem;
 }
 
 .button {
