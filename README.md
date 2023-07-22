@@ -1,4 +1,4 @@
-# Foss Domains
+# OSSNET
 
 Free domains for open source projects.
 
