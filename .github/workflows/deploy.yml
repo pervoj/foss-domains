@@ -21,11 +21,10 @@ jobs:
       - uses: gacts/install-dnscontrol@v1
 
       - name: Create credentials file
-        working-directory: dns
-        run: echo '{"cloudflare":{"TYPE":"CLOUDFLAREAPI","accountid":"$CF_ID","apitoken":"$CF_TOKEN"}}' > ./creds.json
+        run: echo '{"cloudflare":{"TYPE":"CLOUDFLAREAPI","accountid":"$CF_ID","apitoken":"$CF_TOKEN"}}' > ./script/creds.json
 
       - run: dnscontrol push
-        working-directory: dns
+        working-directory: script
         env:
           CF_ID: ${{ secrets.CF_ACCOUNT_ID }}
           CF_TOKEN: ${{ secrets.CF_API_TOKEN }}

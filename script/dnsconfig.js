@@ -1,7 +1,7 @@
 // @ts-check
-/// <reference path="../types/types-dnscontrol.d.ts" />
-/// <reference path="../types/glob.d.ts" />
-/// <reference path="../types/objects.d.ts" />
+/// <reference path="types/types-dnscontrol.d.ts" />
+/// <reference path="types/glob.d.ts" />
+/// <reference path="types/objects.d.ts" />
 
 var RECORD_TYPES = ["a", "aaaa", "cname", "mx", "ns", "txt"];
 
