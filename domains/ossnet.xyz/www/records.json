@@ -1,6 +1,7 @@
 [
   {
     "type": "cname",
-    "value": "ossnet.xyz."
+    "value": "ossnet.xyz.",
+    "proxy": true
   }
 ]

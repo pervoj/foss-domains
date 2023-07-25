@@ -1,34 +1,42 @@
 [
   {
     "type": "a",
-    "value": "185.199.108.153"
+    "value": "185.199.108.153",
+    "proxy": true
   },
   {
     "type": "a",
-    "value": "185.199.109.153"
+    "value": "185.199.109.153",
+    "proxy": true
   },
   {
     "type": "a",
-    "value": "185.199.110.153"
+    "value": "185.199.110.153",
+    "proxy": true
   },
   {
     "type": "a",
-    "value": "185.199.111.153"
+    "value": "185.199.111.153",
+    "proxy": true
   },
   {
     "type": "aaaa",
-    "value": "2606:50c0:8000::153"
+    "value": "2606:50c0:8000::153",
+    "proxy": true
   },
   {
     "type": "aaaa",
-    "value": "2606:50c0:8001::153"
+    "value": "2606:50c0:8001::153",
+    "proxy": true
   },
   {
     "type": "aaaa",
-    "value": "2606:50c0:8002::153"
+    "value": "2606:50c0:8002::153",
+    "proxy": true
   },
   {
     "type": "aaaa",
-    "value": "2606:50c0:8003::153"
+    "value": "2606:50c0:8003::153",
+    "proxy": true
   }
 ]

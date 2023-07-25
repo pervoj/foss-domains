@@ -1,6 +1,7 @@
 [
   {
     "type": "cname",
-    "value": "fosslab.cc."
+    "value": "fosslab.cc.",
+    "proxy": true
   }
 ]
