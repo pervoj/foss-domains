@@ -55,6 +55,10 @@ function validateRecords(records) {
     if (record["ttl"] && typeof record["ttl"] != "number") {
       throw new Error(JSON.stringify(record) + ", `ttl` must be a number!");
     }
+
+    if (record["proxy"] && typeof record["proxy"] != "boolean") {
+      throw new Error(JSON.stringify(record) + ", `proxy` must be a boolean!");
+    }
   }
 }
 
@@ -127,16 +131,19 @@ for (var i = 0; i < domains.length; i++) {
       var ttl = TTL(DEFAULT_TTL); // (record.ttl) ? record.ttl : DEFAULT_TTL
       if (record.ttl) ttl = TTL(record.ttl);
 
+      var proxy = CF_PROXY_OFF;
+      if (record.proxy) proxy = CF_PROXY_ON;
+
       // Add record based on the type and the data.
       switch (record.type) {
         case "a":
-          records.push(A(recordName, record.value, ttl));
+          records.push(A(recordName, record.value, ttl, proxy));
           break;
         case "aaaa":
-          records.push(AAAA(recordName, record.value, ttl));
+          records.push(AAAA(recordName, record.value, ttl, proxy));
           break;
         case "cname":
-          records.push(CNAME(recordName, record.value, ttl));
+          records.push(CNAME(recordName, record.value, ttl, proxy));
           break;
         case "mx":
           records.push(

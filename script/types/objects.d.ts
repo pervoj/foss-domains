@@ -4,6 +4,8 @@ type DnsRecord = {
   value: string;
   ttl?: number;
 
+  proxy?: boolean;
+
   // Only for MX records.
   priority?: number;
 };
